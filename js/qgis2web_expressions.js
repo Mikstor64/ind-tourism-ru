@@ -754,3 +754,667 @@ function fnc__specialcol_(values, context) {
 function fnc_project_color(values, context) {
     return false;
 };
+
+
+
+function exp__3rule1_eval_expression(context) {
+    // count > 0 AND count <= 6
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['count']  > 0.0) && (feature.properties['count']  <= 6.0));
+    } else {
+        return ((feature['count']  > 0.0) && (feature['count']  <= 6.0));
+    }
+}
+
+
+function exp__3rule2_eval_expression(context) {
+    // count > 6 AND count <= 10
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['count']  > 6.0) && (feature.properties['count']  <= 10.0));
+    } else {
+        return ((feature['count']  > 6.0) && (feature['count']  <= 10.0));
+    }
+}
+
+
+function exp__3rule3_eval_expression(context) {
+    // count > 10 AND count <= 14
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['count']  > 10.0) && (feature.properties['count']  <= 14.0));
+    } else {
+        return ((feature['count']  > 10.0) && (feature['count']  <= 14.0));
+    }
+}
+
+
+function exp__3rule4_eval_expression(context) {
+    // count > 14 AND count <= 18
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['count']  > 14.0) && (feature.properties['count']  <= 18.0));
+    } else {
+        return ((feature['count']  > 14.0) && (feature['count']  <= 18.0));
+    }
+}
+
+
+function exp__3rule5_eval_expression(context) {
+    // count > 18 AND count <= 28
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['count']  > 18.0) && (feature.properties['count']  <= 28.0));
+    } else {
+        return ((feature['count']  > 18.0) && (feature['count']  <= 28.0));
+    }
+}
+
+
+function exp__6rule0_eval_expression(context) {
+    // industry = 'Электроэнергетика'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Электроэнергетика');
+    } else {
+        return (feature['industry']  == 'Электроэнергетика');
+    }
+}
+
+
+function exp__6rule1_eval_expression(context) {
+    // industry <> 'Электроэнергетика'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Электроэнергетика');
+    } else {
+        return (feature['industry']  != 'Электроэнергетика');
+    }
+}
+
+
+function exp__7rule0_eval_expression(context) {
+    // industry = 'Химическая промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Химическая промышленность');
+    } else {
+        return (feature['industry']  == 'Химическая промышленность');
+    }
+}
+
+
+function exp__7rule1_eval_expression(context) {
+    // industry <> 'Химическая промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Химическая промышленность');
+    } else {
+        return (feature['industry']  != 'Химическая промышленность');
+    }
+}
+
+
+function exp__8rule0_eval_expression(context) {
+    // industry = 'Фармацевтика'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Фармацевтика');
+    } else {
+        return (feature['industry']  == 'Фармацевтика');
+    }
+}
+
+
+function exp__8rule1_eval_expression(context) {
+    // industry <> 'Фармацевтика'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Фармацевтика');
+    } else {
+        return (feature['industry']  != 'Фармацевтика');
+    }
+}
+
+
+function exp__9rule0_eval_expression(context) {
+    // industry = 'Транспорт'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Транспорт');
+    } else {
+        return (feature['industry']  == 'Транспорт');
+    }
+}
+
+
+function exp__9rule1_eval_expression(context) {
+    // industry <> 'Транспорт'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Транспорт');
+    } else {
+        return (feature['industry']  != 'Транспорт');
+    }
+}
+
+
+function exp__10rule0_eval_expression(context) {
+    // industry = 'Топливная промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Топливная промышленность');
+    } else {
+        return (feature['industry']  == 'Топливная промышленность');
+    }
+}
+
+
+function exp__10rule1_eval_expression(context) {
+    // industry <> 'Топливная промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Топливная промышленность');
+    } else {
+        return (feature['industry']  != 'Топливная промышленность');
+    }
+}
+
+
+function exp__11rule0_eval_expression(context) {
+    // industry = 'Судостроение'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Судостроение');
+    } else {
+        return (feature['industry']  == 'Судостроение');
+    }
+}
+
+
+function exp__11rule1_eval_expression(context) {
+    // industry <> 'Судостроение'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Судостроение');
+    } else {
+        return (feature['industry']  != 'Судостроение');
+    }
+}
+
+
+function exp__12rule0_eval_expression(context) {
+    // industry = 'Строительство'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Строительство');
+    } else {
+        return (feature['industry']  == 'Строительство');
+    }
+}
+
+
+function exp__12rule1_eval_expression(context) {
+    // industry <> 'Строительство'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Строительство');
+    } else {
+        return (feature['industry']  != 'Строительство');
+    }
+}
+
+
+function exp__13rule0_eval_expression(context) {
+    // industry = 'Спорт'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Спорт');
+    } else {
+        return (feature['industry']  == 'Спорт');
+    }
+}
+
+
+function exp__13rule1_eval_expression(context) {
+    // industry <> 'Спорт'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Спорт');
+    } else {
+        return (feature['industry']  != 'Спорт');
+    }
+}
+
+
+function exp__14rule0_eval_expression(context) {
+    // industry = 'Сельское хозяйство'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Сельское хозяйство');
+    } else {
+        return (feature['industry']  == 'Сельское хозяйство');
+    }
+}
+
+
+function exp__14rule1_eval_expression(context) {
+    // industry <> 'Сельское хозяйство'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Сельское хозяйство');
+    } else {
+        return (feature['industry']  != 'Сельское хозяйство');
+    }
+}
+
+
+function exp__15rule0_eval_expression(context) {
+    // industry = 'Прочие производства'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Прочие производства');
+    } else {
+        return (feature['industry']  == 'Прочие производства');
+    }
+}
+
+
+function exp__15rule1_eval_expression(context) {
+    // industry <> 'Прочие производства'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Прочие производства');
+    } else {
+        return (feature['industry']  != 'Прочие производства');
+    }
+}
+
+
+function exp__16rule0_eval_expression(context) {
+    // industry = 'Промышленность строительных материалов'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Промышленность строительных материалов');
+    } else {
+        return (feature['industry']  == 'Промышленность строительных материалов');
+    }
+}
+
+
+function exp__16rule1_eval_expression(context) {
+    // industry <> 'Промышленность строительных материалов'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Промышленность строительных материалов');
+    } else {
+        return (feature['industry']  != 'Промышленность строительных материалов');
+    }
+}
+
+
+function exp__17rule0_eval_expression(context) {
+    // industry = 'Производство ювелирных изделий'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Производство ювелирных изделий');
+    } else {
+        return (feature['industry']  == 'Производство ювелирных изделий');
+    }
+}
+
+
+function exp__17rule1_eval_expression(context) {
+    // industry <> 'Производство ювелирных изделий'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Производство ювелирных изделий');
+    } else {
+        return (feature['industry']  != 'Производство ювелирных изделий');
+    }
+}
+
+
+function exp__18rule0_eval_expression(context) {
+    // industry = 'Производство электроники'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Производство электроники');
+    } else {
+        return (feature['industry']  == 'Производство электроники');
+    }
+}
+
+
+function exp__18rule1_eval_expression(context) {
+    // industry <> 'Производство электроники'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Производство электроники');
+    } else {
+        return (feature['industry']  != 'Производство электроники');
+    }
+}
+
+
+function exp__19rule0_eval_expression(context) {
+    // industry = 'Производство стекла'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Производство стекла');
+    } else {
+        return (feature['industry']  == 'Производство стекла');
+    }
+}
+
+
+function exp__19rule1_eval_expression(context) {
+    // industry <> 'Производство стекла'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Производство стекла');
+    } else {
+        return (feature['industry']  != 'Производство стекла');
+    }
+}
+
+
+function exp__20rule0_eval_expression(context) {
+    // industry = 'Производство денежных знаков'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Производство денежных знаков');
+    } else {
+        return (feature['industry']  == 'Производство денежных знаков');
+    }
+}
+
+
+function exp__20rule1_eval_expression(context) {
+    // industry <> 'Производство денежных знаков'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Производство денежных знаков');
+    } else {
+        return (feature['industry']  != 'Производство денежных знаков');
+    }
+}
+
+
+function exp__21rule0_eval_expression(context) {
+    // industry = 'Полиграфическая деятельность '
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Полиграфическая деятельность ');
+    } else {
+        return (feature['industry']  == 'Полиграфическая деятельность ');
+    }
+}
+
+
+function exp__21rule1_eval_expression(context) {
+    // industry <> 'Полиграфическая деятельность '
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Полиграфическая деятельность ');
+    } else {
+        return (feature['industry']  != 'Полиграфическая деятельность ');
+    }
+}
+
+
+function exp__22rule0_eval_expression(context) {
+    // industry = 'Пищевая промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Пищевая промышленность');
+    } else {
+        return (feature['industry']  == 'Пищевая промышленность');
+    }
+}
+
+
+function exp__22rule1_eval_expression(context) {
+    // industry <> 'Пищевая промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Пищевая промышленность');
+    } else {
+        return (feature['industry']  != 'Пищевая промышленность');
+    }
+}
+
+
+function exp__23rule0_eval_expression(context) {
+    // industry = 'Образование и наука'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Образование и наука');
+    } else {
+        return (feature['industry']  == 'Образование и наука');
+    }
+}
+
+
+function exp__23rule1_eval_expression(context) {
+    // industry <> 'Образование и наука'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Образование и наука');
+    } else {
+        return (feature['industry']  != 'Образование и наука');
+    }
+}
+
+
+function exp__24rule0_eval_expression(context) {
+    // industry = 'Машиностроение'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Машиностроение');
+    } else {
+        return (feature['industry']  == 'Машиностроение');
+    }
+}
+
+
+function exp__24rule1_eval_expression(context) {
+    // industry <> 'Машиностроение'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Машиностроение');
+    } else {
+        return (feature['industry']  != 'Машиностроение');
+    }
+}
+
+
+function exp__25rule0_eval_expression(context) {
+    // industry = 'Лесная и древообрабатывающая промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Лесная и древообрабатывающая промышленность');
+    } else {
+        return (feature['industry']  == 'Лесная и древообрабатывающая промышленность');
+    }
+}
+
+
+function exp__25rule1_eval_expression(context) {
+    // industry <> 'Лесная и древообрабатывающая промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Лесная и древообрабатывающая промышленность');
+    } else {
+        return (feature['industry']  != 'Лесная и древообрабатывающая промышленность');
+    }
+}
+
+
+function exp__26rule0_eval_expression(context) {
+    // industry = 'Легкая промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Легкая промышленность');
+    } else {
+        return (feature['industry']  == 'Легкая промышленность');
+    }
+}
+
+
+function exp__26rule1_eval_expression(context) {
+    // industry <> 'Легкая промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Легкая промышленность');
+    } else {
+        return (feature['industry']  != 'Легкая промышленность');
+    }
+}
+
+
+function exp__27rule0_eval_expression(context) {
+    // industry = 'Добыча неметаллических материалов'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Добыча неметаллических материалов');
+    } else {
+        return (feature['industry']  == 'Добыча неметаллических материалов');
+    }
+}
+
+
+function exp__27rule1_eval_expression(context) {
+    // industry <> 'Добыча неметаллических материалов'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Добыча неметаллических материалов');
+    } else {
+        return (feature['industry']  != 'Добыча неметаллических материалов');
+    }
+}
+
+
+function exp__28rule0_eval_expression(context) {
+    // industry = 'Добыча металлических руд и металлургия'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Добыча металлических руд и металлургия');
+    } else {
+        return (feature['industry']  == 'Добыча металлических руд и металлургия');
+    }
+}
+
+
+function exp__28rule1_eval_expression(context) {
+    // industry <> 'Добыча металлических руд и металлургия'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Добыча металлических руд и металлургия');
+    } else {
+        return (feature['industry']  != 'Добыча металлических руд и металлургия');
+    }
+}
