@@ -66,6 +66,9 @@
         <script src="data/_27.js"></script>
         <script src="data/_28.js"></script>
         <script src="data/_29.js"></script>
+        <script src="data/_30.js"></script>
+        <script src="data/_31.js"></script>
+        <script src="data/_32.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:18, minZoom:3
@@ -312,59 +315,6 @@
             style: style__3_0,
         });
         bounds_group.addLayer(layer__3);
-        function pop__4(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style__4_0() {
-            return {
-                pane: 'pane__4',
-                opacity: 1,
-                color: 'rgba(245,75,80,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 5.0,
-                fillOpacity: 0,
-                interactive: false,
-            }
-        }
-        function style__4_1() {
-            return {
-                pane: 'pane__4',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '8.0,4.0',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 2.0,
-                fillOpacity: 0,
-                interactive: false,
-            }
-        }
-        map.createPane('pane__4');
-        map.getPane('pane__4').style.zIndex = 404;
-        map.getPane('pane__4').style['mix-blend-mode'] = 'normal';
-        var layer__4 = new L.geoJson.multiStyle(json__4, {
-            attribution: '',
-            interactive: false,
-            dataVar: 'json__4',
-            layerName: 'layer__4',
-            pane: 'pane__4',
-            onEachFeature: pop__4,
-            styles: [style__4_0,style__4_1,]
-        });
-        bounds_group.addLayer(layer__4);
-        map.addLayer(layer__4);
         function pop__5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1825,12 +1775,185 @@
 
         bounds_group.addLayer(layer__28);
         cluster__28.addTo(map);
-
         function style__29_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp__29rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane__29',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/7_автопром_легенда.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            };
+                }
+                else if (exp__29rule1_eval_expression(context)) {
+                  return {
+                pane: 'pane__29',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/0_пусто.svg',
+            iconSize: [7.6, 7.6]
+        }),
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane__29');
+        map.getPane('pane__29').style.zIndex = 429;
+        map.getPane('pane__29').style['mix-blend-mode'] = 'normal';
+        var layer__29 = new L.geoJson(json__28, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json__29',
+            layerName: 'layer__29',
+            pane: 'pane__29',
+            onEachFeature: pop__6_29,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style__29_0(feature));
+            },
+        });
+        var cluster__29 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+            spiderfyDistanceMultiplier: 2});
+        cluster__29.addLayer(layer__29);
+
+        bounds_group.addLayer(layer__29);
+        cluster__29.addTo(map);
+        function style__30_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp__30rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane__30',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/24_авиапром_легенда.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            };
+                }
+                else if (exp__30rule1_eval_expression(context)) {
+                  return {
+                pane: 'pane__30',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/0_пусто.svg',
+            iconSize: [7.6, 7.6]
+        }),
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane__30');
+        map.getPane('pane__30').style.zIndex = 430;
+        map.getPane('pane__30').style['mix-blend-mode'] = 'normal';
+        var layer__30 = new L.geoJson(json__28, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json__30',
+            layerName: 'layer__30',
+            pane: 'pane__30',
+            onEachFeature: pop__6_29,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style__30_0(feature));
+            },
+        });
+        var cluster__30 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+            spiderfyDistanceMultiplier: 2});
+        cluster__30.addLayer(layer__30);
+
+        bounds_group.addLayer(layer__30);
+        cluster__30.addTo(map);
+        function style__31_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp__31rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane__31',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/25_народное_легенда.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            };
+                }
+                else if (exp__31rule1_eval_expression(context)) {
+                  return {
+                pane: 'pane__31',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/0_пусто.svg',
+            iconSize: [7.6, 7.6]
+        }),
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane__31');
+        map.getPane('pane__31').style.zIndex = 431;
+        map.getPane('pane__31').style['mix-blend-mode'] = 'normal';
+        var layer__31 = new L.geoJson(json__28, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json__31',
+            layerName: 'layer__31',
+            pane: 'pane__31',
+            onEachFeature: pop__6_29,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style__31_0(feature));
+            },
+        });
+        var cluster__31 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+            spiderfyDistanceMultiplier: 2});
+        cluster__31.addLayer(layer__31);
+
+        bounds_group.addLayer(layer__31);
+        cluster__31.addTo(map);
+        function style__32_0(feature) {
             switch(String(feature.properties['ind_tour_class'])) {
                 case 'Действующее предприятие':
                     return {
-                pane: 'pane__29',
+                pane: 'pane__32',
                 radius: 16.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -1846,7 +1969,7 @@
                     break;
                 case 'Музей промышленности':
                     return {
-                pane: 'pane__29',
+                pane: 'pane__32',
                 radius: 16.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -1862,7 +1985,7 @@
                     break;
                 case 'Промышленное наследие':
                     return {
-                pane: 'pane__29',
+                pane: 'pane__32',
                 radius: 16.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -1878,33 +2001,36 @@
                     break;
             }
         }
-        map.createPane('pane__29');
-        map.getPane('pane__29').style.zIndex = 429;
-        map.getPane('pane__29').style['mix-blend-mode'] = 'normal';
-        var layer__29 = new L.geoJson(json__29, {
+        map.createPane('pane__32');
+        map.getPane('pane__32').style.zIndex = 432;
+        map.getPane('pane__32').style['mix-blend-mode'] = 'normal';
+        var layer__32 = new L.geoJson(json__32, {
             attribution: '',
             interactive: true,
-            dataVar: 'json__29',
-            layerName: 'layer__29',
-            pane: 'pane__29',
+            dataVar: 'json__32',
+            layerName: 'layer__32',
+            pane: 'pane__32',
             onEachFeature: pop__6_29,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style__29_0(feature));
+                return L.circleMarker(latlng, style__32_0(feature));
             },
         });
-        var cluster__29 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+        var cluster__32 = new L.MarkerClusterGroup({showCoverageOnHover: false,
             spiderfyDistanceMultiplier: 2});
-        cluster__29.addLayer(layer__29);
+        cluster__32.addLayer(layer__32);
 
-        bounds_group.addLayer(layer__29);
-        cluster__29.addTo(map);
+        bounds_group.addLayer(layer__32);
+        cluster__32.addTo(map);
         var overlaysTree = [
-            {label: 'Типы объектов промышленного туризма<br /><table><tr><td style="text-align: center;"><img src="legend/_29_Действующеепредприятие0.png" /></td><td>Действующее предприятие</td></tr><tr><td style="text-align: center;"><img src="legend/_29_Музейпромышленности1.png" /></td><td>Музей промышленности</td></tr><tr><td style="text-align: center;"><img src="legend/_29_Промышленноенаследие2.png" /></td><td>Промышленное наследие</td></tr></table>', layer: cluster__29},
+            {label: 'Типы объектов промышленного туризма<br /><table><tr><td style="text-align: center;"><img src="legend/_32_Действующеепредприятие0.png" /></td><td>Действующее предприятие</td></tr><tr><td style="text-align: center;"><img src="legend/_32_Музейпромышленности1.png" /></td><td>Музей промышленности</td></tr><tr><td style="text-align: center;"><img src="legend/_32_Промышленноенаследие2.png" /></td><td>Промышленное наследие</td></tr></table>', layer: cluster__32},
         {label: '<b>Отрасли объектов промышленного туризма</b>', collapsed: true, selectAllCheckbox: true, children: [
+            {label: '<br /><table><tr><td style="text-align: center;"><img src="legend/_31_Народныепромыслы0.png" /></td><td>Народные промыслы</td></tr></table>', layer: cluster__31},
+            {label: '<br /><table><tr><td style="text-align: center;"><img src="legend/_30_Авиационнаяпромышленность0.png" /></td><td>Авиационная промышленность</td></tr></table>', layer: cluster__30},
+            {label: '<br /><table><tr><td style="text-align: center;"><img src="legend/_29_Автомобильнаяпромышленность0.png" /></td><td>Автомобильная промышленность</td></tr></table>', layer: cluster__29},
             {label: '<br /><table><tr><td style="text-align: center;"><img src="legend/_28_Добычаметаллическихрудиметаллургия0.png" /></td><td>Добыча металлических руд и металлургия</td></tr></table>', layer: cluster__28},
             {label: '<br /><table><tr><td style="text-align: center;"><img src="legend/_27_Добычанеметаллов0.png" /></td><td>Добыча неметаллов</td></tr></table>', layer: cluster__27},
             {label: '<br /><table><tr><td style="text-align: center;"><img src="legend/_26_Легкаяпромышленность0.png" /></td><td>Легкая промышленность</td></tr></table>', layer: cluster__26},
@@ -1929,7 +2055,6 @@
             {label: '<br /><table><tr><td style="text-align: center;"><img src="legend/_7_Химическаяпромышленность0.png" /></td><td>Химическая промышленность</td></tr></table>', layer: cluster__7},
             {label: '<br /><table><tr><td style="text-align: center;"><img src="legend/_6_Электроэнергетика0.png" /></td><td>Электроэнергетика</td></tr></table>', layer: cluster__6},]},
             {label: '<img src="legend/_5.png" /> Производственные экскурсии', layer: cluster__5},
-            {label: '<img src="legend/_4.png" /> Граница Северо-Западного федерального округа', layer: layer__4},
         {label: '<b>Регионы России</b>',  selectAllCheckbox: true, children: [
             {label: 'Количествво объектов промышленного туризма<br /><table><tr><td style="text-align: center;"><img src="legend/_3_нетданных0.png" /></td><td>нет данных</td></tr><tr><td style="text-align: center;"><img src="legend/_3_менее61.png" /></td><td>менее 6</td></tr><tr><td style="text-align: center;"><img src="legend/_3_6102.png" /></td><td>6 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/_3_10143.png" /></td><td>10 - 14</td></tr><tr><td style="text-align: center;"><img src="legend/_3_14184.png" /></td><td>14 - 18</td></tr><tr><td style="text-align: center;"><img src="legend/_3_более185.png" /></td><td>более 18</td></tr></table>', layer: layer__3},]},
         ]
