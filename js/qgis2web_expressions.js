@@ -1418,3 +1418,79 @@ function exp__28rule1_eval_expression(context) {
         return (feature['industry']  != 'Добыча металлических руд и металлургия');
     }
 }
+
+function exp__31rule0_eval_expression(context) {
+    // industry = 'Народные промыслы'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Народные промыслы');
+    } else {
+        return (feature['industry']  == 'Народные промыслы');
+    }
+}
+
+
+function exp__29rule0_eval_expression(context) {
+    // industry = 'Автомобильная промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Автомобильная промышленность');
+    } else {
+        return (feature['industry']  == 'Автомобильная промышленность');
+    }
+}
+
+
+function exp__29rule1_eval_expression(context) {
+    // industry <> 'Автомобильная промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Автомобильная промышленность');
+    } else {
+        return (feature['industry']  != 'Автомобильная промышленность');
+    }
+}
+
+
+function exp__30rule0_eval_expression(context) {
+    // industry = 'Авиационная промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  == 'Авиационная промышленность');
+    } else {
+        return (feature['industry']  == 'Авиационная промышленность');
+    }
+}
+
+
+function exp__30rule1_eval_expression(context) {
+    // industry <> 'Авиационная промышленность'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Авиационная промышленность');
+    } else {
+        return (feature['industry']  != 'Авиационная промышленность');
+    }
+}
+
+function exp__31rule1_eval_expression(context) {
+    // industry <> 'Народные промыслы'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['industry']  != 'Народные промыслы');
+    } else {
+        return (feature['industry']  != 'Народные промыслы');
+    }
+}
